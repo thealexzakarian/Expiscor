@@ -3,47 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Background Video</title>
+  <title>Regenesis Project | ExpiScor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow-x: hidden;
+    :root {
+      --bg-dark: #0a0a0a;
+      --accent: #00ffc3;
+      --text: #f1f1f1;
+      --muted: #999;
     }
 
-    #bgvid {
-      position: fixed;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    section video.bgvid {
+      position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: -1;
-      opacity: 0.3;
+      opacity: 0.25;
       pointer-events: none;
     }
 
-    .content {
+    section .content {
       position: relative;
       z-index: 1;
-      padding: 100px;
-      color: white;
-      font-size: 2rem;
+      padding: 4rem 2rem;
+      backdrop-filter: blur(6px);
       background: rgba(0, 0, 0, 0.5);
+      max-width: 900px;
+      margin: auto;
+      border-radius: 12px;
+    }
+
+    h2.major {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    header {
+      padding: 10rem 2rem 4rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--text);
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 4rem auto;
+    }
+
+    .cta a.button {
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      padding: 1rem 3rem;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      box-shadow: 0 0 12px rgba(0, 255, 195, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .cta a.button:hover {
+      background: #00ddb0;
+    }
+
+    footer {
+      background: #000;
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <video autoplay muted loop id="bgvid">
-    <source src="Videos/Jellyfish.mp4" type="video/mp4">
-  </video>
+  <header>
+    <h1>Regenesis Project</h1>
+    <p>by <strong>ExpiScor</strong> — Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
+    <nav>
+      <ul>
+        <li><a href="#why">Why</a></li>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#vision">Vision</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="content">
-    <h1>Hello from Jellyfish land 🪼</h1>
-    <p>Scroll down to see if the video is behind this content.</p>
+  <!-- Section: Why -->
+  <section id="why">
+    <video class="bgvid" autoplay muted loop>
+      <source src="Videos/Jellyfish.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Why the Immortal Jellyfish?</h2>
+      <p><em>Turritopsis dohrnii</em> can biologically reset its life cycle by reverting mature cells to a juvenile state. Its unmatched regenerative powers offer a natural roadmap to reverse aging — a perfect subject for cutting-edge biotech research.</p>
+    </div>
+  </section>
+
+  <!-- Section: Problem -->
+  <section id="problem">
+    <video class="bgvid" autoplay muted loop>
+      <source src="Videos/Coding.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">The Problem</h2>
+      <p>Modern medicine treats symptoms, not causes. Aging remains the underlying driver of chronic diseases and cellular decline. Humanity lacks the tools to repair age-related damage at the source — until now.</p>
+    </div>
+  </section>
+
+  <!-- Section: Approach -->
+  <section id="approach">
+    <video class="bgvid" autoplay muted loop>
+      <source src="Videos/Genetics.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Our Approach</h2>
+      <ul>
+        <li><strong>Genomic Mapping:</strong> Sequencing and comparing regenerative vs. non-regenerative species.</li>
+        <li><strong>Bioinformatics:</strong> Mining genes tied to transdifferentiation, DNA repair, and telomerase activity.</li>
+        <li><strong>CRISPR Editing:</strong> Functional testing and gene manipulation in model organisms.</li>
+        <li><strong>Stem Cell Reprogramming:</strong> Translating jellyfish mechanisms to human regenerative models.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Goals -->
+  <section id="goals">
+    <div class="content">
+      <h2 class="major">Goals</h2>
+      <ul>
+        <li>Unlock the genetic code of biological immortality.</li>
+        <li>Create scalable anti-aging interventions.</li>
+        <li>Bridge marine biology with human therapeutics.</li>
+        <li>Build a framework for future regenerative platforms.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Mission -->
+  <section id="mission">
+    <div class="content">
+      <h2 class="major">Mission</h2>
+      <p>To lead a global shift in healthcare by turning age-reversal science from theory into scalable, life-enhancing solutions.</p>
+    </div>
+  </section>
+
+  <!-- Section: Vision -->
+  <section id="vision">
+    <div class="content">
+      <h2 class="major">Vision</h2>
+      <p>A future where aging is optional and regenerative health is accessible to all — powered by the secrets of nature's most resilient organisms.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="#" class="button">Join the Research</a>
   </div>
+
+  <footer>
+    <p>&copy; 2025 ExpiScor | Regenesis Project — All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
