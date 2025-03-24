@@ -25,7 +25,7 @@
       background: transparent;
     }
 
-    section {
+    section, header {
       position: relative;
       min-height: 100vh;
       overflow: hidden;
@@ -35,7 +35,7 @@
       text-align: center;
     }
 
-    section video.bgvid {
+    video.bgvid {
       position: absolute;
       top: 0;
       left: 0;
@@ -47,7 +47,7 @@
       pointer-events: none;
     }
 
-    section .content {
+    .content {
       position: relative;
       z-index: 1;
       padding: 4rem 2rem;
@@ -58,32 +58,17 @@
       border-radius: 12px;
     }
 
+    h1, h2.major {
+      color: var(--accent);
+    }
+
     h2.major {
       font-size: 2.5rem;
-      color: var(--accent);
       margin-bottom: 1rem;
-    }
-
-    ul {
-      text-align: left;
-      margin-top: 1rem;
-      padding-left: 1.5rem;
-    }
-
-    ul li {
-      margin-bottom: 0.8rem;
-    }
-
-    header {
-      padding: 10rem 2rem 4rem;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(6px);
     }
 
     header h1 {
       font-size: 4rem;
-      color: var(--accent);
       margin-bottom: 1rem;
     }
 
@@ -116,6 +101,16 @@
     nav a:hover {
       background: var(--accent);
       color: #000;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
     }
 
     .cta {
@@ -151,22 +146,28 @@
 </head>
 <body>
 
+  <!-- Header with Title.mp4 -->
   <header>
-    <h1>Regenesis Project</h1>
-    <p>by <strong>ExpiScor</strong> — Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
-    <nav>
-      <ul>
-        <li><a href="#why">Why</a></li>
-        <li><a href="#problem">Problem</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#goals">Goals</a></li>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#vision">Vision</a></li>
-      </ul>
-    </nav>
+    <video class="bgvid" autoplay muted loop>
+      <source src="Videos/Title.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h1>Regenesis Project</h1>
+      <p>by <strong>ExpiScor</strong> — Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
+      <nav>
+        <ul>
+          <li><a href="#why">Why</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#goals">Goals</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#vision">Vision</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Section: Why -->
+  <!-- Why -->
   <section id="why">
     <video class="bgvid" autoplay muted loop>
       <source src="Videos/Jellyfish.mp4" type="video/mp4">
@@ -177,7 +178,7 @@
     </div>
   </section>
 
-  <!-- Section: Problem -->
+  <!-- Problem -->
   <section id="problem">
     <video class="bgvid" autoplay muted loop>
       <source src="Videos/Coding.mp4" type="video/mp4">
@@ -188,7 +189,7 @@
     </div>
   </section>
 
-  <!-- Section: Approach -->
+  <!-- Approach -->
   <section id="approach">
     <video class="bgvid" autoplay muted loop>
       <source src="Videos/Genetics.mp4" type="video/mp4">
@@ -204,8 +205,11 @@
     </div>
   </section>
 
-  <!-- Section: Goals -->
+  <!-- Goals -->
   <section id="goals">
+    <video class="bgvid" autoplay muted loop>
+      <source src="Videos/Goals.mp4" type="video/mp4">
+    </video>
     <div class="content">
       <h2 class="major">Goals</h2>
       <ul>
@@ -217,16 +221,22 @@
     </div>
   </section>
 
-  <!-- Section: Mission -->
+  <!-- Mission -->
   <section id="mission">
+    <video class="bgvid" autoplay muted loop>
+      <source src="Videos/Mission.mp4" type="video/mp4">
+    </video>
     <div class="content">
       <h2 class="major">Mission</h2>
       <p>To lead a global shift in healthcare by turning age-reversal science from theory into scalable, life-enhancing solutions.</p>
     </div>
   </section>
 
-  <!-- Section: Vision -->
+  <!-- Vision -->
   <section id="vision">
+    <video class="bgvid" autoplay muted loop>
+      <source src="Videos/Vision.mp4" type="video/mp4">
+    </video>
     <div class="content">
       <h2 class="major">Vision</h2>
       <p>A future where aging is optional and regenerative health is accessible to all — powered by the secrets of nature's most resilient organisms.</p>
