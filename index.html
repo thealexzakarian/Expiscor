@@ -27,6 +27,80 @@
       line-height: 1.7;
     }
 
+    /* Fullscreen video */
+    #bgVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+
+    header.hero {
+      position: relative;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    #myBtn {
+      margin-top: 2rem;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    #myBtn:hover {
+      background: #ddd;
+      color: #000;
+    }
+
     section {
       position: relative;
       padding: 8rem 2rem;
@@ -76,47 +150,6 @@
       margin-bottom: 0.8rem;
     }
 
-    header.hero {
-      text-align: center;
-      padding: 8rem 2rem 4rem;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 3rem;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background: var(--accent);
-      color: #000;
-    }
-
     .cta {
       text-align: center;
       margin: 4rem auto;
@@ -148,6 +181,12 @@
   </style>
 </head>
 <body>
+  <!-- Fullscreen Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="Videos/Jellyfish.mp4" type="video/mp4">
+  </video>
+
+  <!-- Hero Section Overlay -->
   <header class="hero">
     <h1>Regenesis Project</h1>
     <p>by <strong>ExpiScor</strong> — Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
@@ -161,12 +200,10 @@
         <li><a href="#vision">Vision</a></li>
       </ul>
     </nav>
+    <button id="myBtn" onclick="toggleVideo()">Pause</button>
   </header>
 
   <section id="why">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Jellyfish.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">Why the Immortal Jellyfish?</h2>
       <p><em>Turritopsis dohrnii</em> can biologically reset its life cycle by reverting mature cells to a juvenile state. Its unmatched regenerative powers offer a natural roadmap to reverse aging — a perfect subject for cutting-edge biotech research.</p>
@@ -174,9 +211,6 @@
   </section>
 
   <section id="problem">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Genetics.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">The Problem</h2>
       <p>Modern medicine treats symptoms, not causes. Aging remains the underlying driver of chronic diseases and cellular decline. Humanity lacks the tools to repair age-related damage at the source — until now.</p>
@@ -184,9 +218,6 @@
   </section>
 
   <section id="approach">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Research.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">Our Approach</h2>
       <ul>
@@ -199,9 +230,6 @@
   </section>
 
   <section id="goals">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Coding.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">Goals</h2>
       <ul>
@@ -234,5 +262,20 @@
   <footer>
     <p>&copy; 2025 ExpiScor | Regenesis Project — All rights reserved.</p>
   </footer>
+
+  <script>
+    const video = document.getElementById("bgVideo");
+    const btn = document.getElementById("myBtn");
+
+    function toggleVideo() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+  </script>
 </body>
 </html>
