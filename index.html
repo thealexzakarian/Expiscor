@@ -20,44 +20,77 @@
     }
 
     html, body {
-      scroll-behavior: smooth;
       font-family: 'Inter', sans-serif;
       background: var(--bg-dark);
       color: var(--text);
       line-height: 1.7;
     }
 
-    section {
-      position: relative;
-      min-height: 100vh;
-      padding: 5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    section video {
-      position: absolute;
+    #bgvid {
+      position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
       object-fit: cover;
-      z-index: -1;
-      opacity: 0.4;
-      pointer-events: none;
+      z-index: -100;
+      opacity: 0.25;
+    }
+
+    header {
+      padding: 10rem 2rem 4rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+    }
+
+    header h1 {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--text);
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    section {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
     }
 
     section .content {
-      position: relative;
-      z-index: 1;
-      width: 100%;
       max-width: 900px;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 3rem;
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
+      margin: 0 auto;
     }
 
     h2.major {
@@ -66,62 +99,14 @@
       margin-bottom: 1rem;
     }
 
-    p, li {
-      font-size: 1.15rem;
-      color: #ddd;
-    }
-
     ul {
-      padding-left: 1.5rem;
       text-align: left;
+      margin-top: 1rem;
+      padding-left: 1.5rem;
     }
 
-    li {
+    ul li {
       margin-bottom: 0.8rem;
-    }
-
-    header.hero {
-      text-align: center;
-      padding: 8rem 2rem 4rem;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-      backdrop-filter: blur(4px);
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 3rem;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background: var(--accent);
-      color: #000;
     }
 
     .cta {
@@ -155,7 +140,11 @@
   </style>
 </head>
 <body>
-  <header class="hero">
+  <video autoplay muted loop id="bgvid">
+    <source src="Videos/Jellyfish.mp4" type="video/mp4">
+  </video>
+
+  <header>
     <h1>Regenesis Project</h1>
     <p>by <strong>ExpiScor</strong> — Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
     <nav>
@@ -171,9 +160,6 @@
   </header>
 
   <section id="why">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Jellyfish.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">Why the Immortal Jellyfish?</h2>
       <p><em>Turritopsis dohrnii</em> can biologically reset its life cycle by reverting mature cells to a juvenile state. Its unmatched regenerative powers offer a natural roadmap to reverse aging — a perfect subject for cutting-edge biotech research.</p>
@@ -181,9 +167,6 @@
   </section>
 
   <section id="problem">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Genetics.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">The Problem</h2>
       <p>Modern medicine treats symptoms, not causes. Aging remains the underlying driver of chronic diseases and cellular decline. Humanity lacks the tools to repair age-related damage at the source — until now.</p>
@@ -191,9 +174,6 @@
   </section>
 
   <section id="approach">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Research.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">Our Approach</h2>
       <ul>
@@ -206,9 +186,6 @@
   </section>
 
   <section id="goals">
-    <video autoplay muted loop playsinline>
-      <source src="Videos/Coding.mp4" type="video/mp4">
-    </video>
     <div class="content">
       <h2 class="major">Goals</h2>
       <ul>
