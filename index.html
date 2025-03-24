@@ -19,26 +19,24 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
+    html, body {
       font-family: 'Inter', sans-serif;
       background: var(--bg-dark);
       color: var(--text);
       line-height: 1.7;
     }
 
+    /* ✅ Updated background video style */
     #bgvid {
       position: fixed;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100%;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
-      z-index: -100;
+      z-index: -1;
       opacity: 0.25;
+      pointer-events: none;
     }
 
     header {
@@ -145,8 +143,7 @@
 </head>
 <body>
   <video autoplay muted loop id="bgvid">
-    <source src="Videos/Jellyfish.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+    <source src="/Expiscor/Videos/Jellyfish.mp4" type="video/mp4">
   </video>
 
   <header>
@@ -164,59 +161,57 @@
     </nav>
   </header>
 
-  <main>
-    <section id="why">
-      <div class="content">
-        <h2 class="major">Why the Immortal Jellyfish?</h2>
-        <p><em>Turritopsis dohrnii</em> can biologically reset its life cycle by reverting mature cells to a juvenile state. Its unmatched regenerative powers offer a natural roadmap to reverse aging — a perfect subject for cutting-edge biotech research.</p>
-      </div>
-    </section>
+  <section id="why">
+    <div class="content">
+      <h2 class="major">Why the Immortal Jellyfish?</h2>
+      <p><em>Turritopsis dohrnii</em> can biologically reset its life cycle by reverting mature cells to a juvenile state. Its unmatched regenerative powers offer a natural roadmap to reverse aging — a perfect subject for cutting-edge biotech research.</p>
+    </div>
+  </section>
 
-    <section id="problem">
-      <div class="content">
-        <h2 class="major">The Problem</h2>
-        <p>Modern medicine treats symptoms, not causes. Aging remains the underlying driver of chronic diseases and cellular decline. Humanity lacks the tools to repair age-related damage at the source — until now.</p>
-      </div>
-    </section>
+  <section id="problem">
+    <div class="content">
+      <h2 class="major">The Problem</h2>
+      <p>Modern medicine treats symptoms, not causes. Aging remains the underlying driver of chronic diseases and cellular decline. Humanity lacks the tools to repair age-related damage at the source — until now.</p>
+    </div>
+  </section>
 
-    <section id="approach">
-      <div class="content">
-        <h2 class="major">Our Approach</h2>
-        <ul>
-          <li><strong>Genomic Mapping:</strong> Sequencing and comparing regenerative vs. non-regenerative species.</li>
-          <li><strong>Bioinformatics:</strong> Mining genes tied to transdifferentiation, DNA repair, and telomerase activity.</li>
-          <li><strong>CRISPR Editing:</strong> Functional testing and gene manipulation in model organisms.</li>
-          <li><strong>Stem Cell Reprogramming:</strong> Translating jellyfish mechanisms to human regenerative models.</li>
-        </ul>
-      </div>
-    </section>
+  <section id="approach">
+    <div class="content">
+      <h2 class="major">Our Approach</h2>
+      <ul>
+        <li><strong>Genomic Mapping:</strong> Sequencing and comparing regenerative vs. non-regenerative species.</li>
+        <li><strong>Bioinformatics:</strong> Mining genes tied to transdifferentiation, DNA repair, and telomerase activity.</li>
+        <li><strong>CRISPR Editing:</strong> Functional testing and gene manipulation in model organisms.</li>
+        <li><strong>Stem Cell Reprogramming:</strong> Translating jellyfish mechanisms to human regenerative models.</li>
+      </ul>
+    </div>
+  </section>
 
-    <section id="goals">
-      <div class="content">
-        <h2 class="major">Goals</h2>
-        <ul>
-          <li>Unlock the genetic code of biological immortality.</li>
-          <li>Create scalable anti-aging interventions.</li>
-          <li>Bridge marine biology with human therapeutics.</li>
-          <li>Build a framework for future regenerative platforms.</li>
-        </ul>
-      </div>
-    </section>
+  <section id="goals">
+    <div class="content">
+      <h2 class="major">Goals</h2>
+      <ul>
+        <li>Unlock the genetic code of biological immortality.</li>
+        <li>Create scalable anti-aging interventions.</li>
+        <li>Bridge marine biology with human therapeutics.</li>
+        <li>Build a framework for future regenerative platforms.</li>
+      </ul>
+    </div>
+  </section>
 
-    <section id="mission">
-      <div class="content">
-        <h2 class="major">Mission</h2>
-        <p>To lead a global shift in healthcare by turning age-reversal science from theory into scalable, life-enhancing solutions.</p>
-      </div>
-    </section>
+  <section id="mission">
+    <div class="content">
+      <h2 class="major">Mission</h2>
+      <p>To lead a global shift in healthcare by turning age-reversal science from theory into scalable, life-enhancing solutions.</p>
+    </div>
+  </section>
 
-    <section id="vision">
-      <div class="content">
-        <h2 class="major">Vision</h2>
-        <p>A future where aging is optional and regenerative health is accessible to all — powered by the secrets of nature's most resilient organisms.</p>
-      </div>
-    </section>
-  </main>
+  <section id="vision">
+    <div class="content">
+      <h2 class="major">Vision</h2>
+      <p>A future where aging is optional and regenerative health is accessible to all — powered by the secrets of nature's most resilient organisms.</p>
+    </div>
+  </section>
 
   <div class="cta">
     <a href="#" class="button">Join the Research</a>
