@@ -3,82 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Immortal Jellyfish Project</title>
+  <title>Regenesis Project | ExpiScor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --bg-dark: #0a0a0a;
+      --accent: #00ffc3;
+      --text: #f1f1f1;
+      --muted: #999;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f9ff;
-      color: #333;
+      box-sizing: border-box;
     }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.7;
     }
+
     section {
-      padding: 2rem;
+      position: relative;
+      padding: 8rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.25;
+    }
+
+    section .content {
+      position: relative;
+      z-index: 1;
       max-width: 900px;
       margin: auto;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 3rem;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
     }
-    h2 {
-      color: #003366;
+
+    h2.major {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
     }
-    .highlight {
-      background: #e1f5fe;
-      padding: 1rem;
-      border-left: 4px solid #0288d1;
-      margin: 1rem 0;
+
+    p, li {
+      font-size: 1.15rem;
+      color: #ddd;
     }
-    footer {
-      background: #003366;
-      color: white;
+
+    ul {
+      padding-left: 1.5rem;
+      text-align: left;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    header.hero {
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 8rem 2rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 4rem auto;
+    }
+
+    .cta a.button {
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      padding: 1rem 3rem;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      box-shadow: 0 0 12px rgba(0, 255, 195, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .cta a.button:hover {
+      background: #00ddb0;
+    }
+
+    footer {
+      background: #000;
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Immortal Jellyfish Project</h1>
-    <p>Unlocking Nature's Secrets to Reverse Aging</p>
+  <header class="hero">
+    <h1>Regenesis Project</h1>
+    <p>by <strong>ExpiScor</strong> — Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
+    <nav>
+      <ul>
+        <li><a href="#why">Why</a></li>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#vision">Vision</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section>
-    <h2>Problem</h2>
-    <p>Human aging and degenerative diseases continue to be one of the greatest biological and medical challenges. Cellular senescence, DNA damage, and limited regenerative capacity hinder our ability to reverse aging.</p>
-
-    <h2>Project Overview</h2>
-    <div class="highlight">
-      <p>This project investigates the unique regenerative and life cycle-reversal abilities of <em>Turritopsis dohrnii</em>, the only known biologically immortal animal. Through genomic research, we aim to understand the mechanisms behind its transdifferentiation, DNA repair, and telomere maintenance.</p>
+  <section id="why">
+    <video autoplay muted loop playsinline>
+      <source src="/mnt/data/Jellyfish.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Why the Immortal Jellyfish?</h2>
+      <p><em>Turritopsis dohrnii</em> can biologically reset its life cycle by reverting mature cells to a juvenile state. Its unmatched regenerative powers offer a natural roadmap to reverse aging — a perfect subject for cutting-edge biotech research.</p>
     </div>
-
-    <h2>Goals</h2>
-    <ul>
-      <li>Decode the genetic pathways responsible for cellular rejuvenation.</li>
-      <li>Identify key proteins and regulatory factors involved in transdifferentiation.</li>
-      <li>Explore applications of jellyfish genetics in anti-aging and regenerative medicine.</li>
-    </ul>
-
-    <h2>Mission</h2>
-    <p>To advance our understanding of biological immortality and translate nature’s blueprints into breakthroughs in human health and longevity.</p>
-
-    <h2>Vision</h2>
-    <p>To unlock the secrets of regenerative biology and inspire next-generation therapies for aging, trauma, and degenerative diseases.</p>
-
-    <h2>Solution Approach</h2>
-    <ul>
-      <li>Whole-genome sequencing and comparative analysis.</li>
-      <li>Functional studies of stem cell and DNA repair genes.</li>
-      <li>Application of bioinformatics and CRISPR-based gene analysis.</li>
-    </ul>
   </section>
 
+  <section id="problem">
+    <video autoplay muted loop playsinline>
+      <source src="/mnt/data/Genetics.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">The Problem</h2>
+      <p>Modern medicine treats symptoms, not causes. Aging remains the underlying driver of chronic diseases and cellular decline. Humanity lacks the tools to repair age-related damage at the source — until now.</p>
+    </div>
+  </section>
+
+  <section id="approach">
+    <video autoplay muted loop playsinline>
+      <source src="/mnt/data/Research.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Our Approach</h2>
+      <ul>
+        <li><strong>Genomic Mapping:</strong> Sequencing and comparing regenerative vs. non-regenerative species.</li>
+        <li><strong>Bioinformatics:</strong> Mining genes tied to transdifferentiation, DNA repair, and telomerase activity.</li>
+        <li><strong>CRISPR Editing:</strong> Functional testing and gene manipulation in model organisms.</li>
+        <li><strong>Stem Cell Reprogramming:</strong> Translating jellyfish mechanisms to human regenerative models.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="goals">
+    <video autoplay muted loop playsinline>
+      <source src="/mnt/data/Coding.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Goals</h2>
+      <ul>
+        <li>Unlock the genetic code of biological immortality.</li>
+        <li>Create scalable anti-aging interventions.</li>
+        <li>Bridge marine biology with human therapeutics.</li>
+        <li>Build a framework for future regenerative platforms.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="content">
+      <h2 class="major">Mission</h2>
+      <p>To lead a global shift in healthcare by turning age-reversal science from theory into scalable, life-enhancing solutions.</p>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="content">
+      <h2 class="major">Vision</h2>
+      <p>A future where aging is optional and regenerative health is accessible to all — powered by the secrets of nature's most resilient organisms.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="#" class="button">Join the Research</a>
+  </div>
+
   <footer>
-    <p>&copy; 2025 Immortal Jellyfish Research Team. All rights reserved.</p>
+    <p>&copy; 2025 ExpiScor | Regenesis Project — All rights reserved.</p>
   </footer>
 </body>
 </html>
