@@ -10,7 +10,8 @@
       --accent: #00ffc3;
       --text: #eafefb;
       --muted: #9da5ad;
-      --overlay: rgba(0, 0, 0, 0.5);
+      /* Reduced overlay opacity from 0.5 to 0.15 for a clearer background */
+      --overlay: rgba(0, 0, 0, 0.15);
     }
     * {
       margin: 0;
@@ -20,9 +21,9 @@
     html, body {
       height: 100%;
       font-family: 'Inter', sans-serif;
-      background: #000;
+      background: #000; /* Fallback if video fails to load */
       color: var(--text);
-      overflow: hidden; /* Full-screen experience */
+      overflow: hidden; /* Keeps it a single-screen experience */
     }
     .hero {
       position: relative;
@@ -33,7 +34,7 @@
       justify-content: center;
       text-align: center;
     }
-    /* Background Video Styles (same as project page) */
+    /* Background Video (same approach as project page) */
     video.bgvid {
       position: absolute;
       top: 0;
@@ -45,7 +46,7 @@
       opacity: 0.95;
       pointer-events: none;
     }
-    /* Optional overlay for legibility */
+    /* Much lighter overlay so the video is more visible */
     .hero::before {
       content: "";
       position: absolute;
@@ -59,7 +60,8 @@
     .content {
       position: relative;
       z-index: 1;
-      background: rgba(0, 0, 0, 0.6);
+      /* Reduced card background opacity from 0.6 to 0.2 */
+      background: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(6px);
       padding: 40px 30px;
       border-radius: 16px;
