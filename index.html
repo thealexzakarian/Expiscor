@@ -47,28 +47,6 @@
       font-weight: bold;
     }
 
-    header.main {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    header.main video.bgvid {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 0.95;
-    }
-
     .main-content {
       padding-top: 6rem;
       max-width: 700px;
@@ -79,6 +57,7 @@
       background: rgba(0, 0, 0, 0.4);
       border-radius: 12px;
       padding: 4rem 2rem;
+      text-align: center;
     }
 
     .main-content h1 {
@@ -103,7 +82,7 @@
       text-decoration: none;
     }
 
-    section.project {
+    section {
       position: relative;
       min-height: 100vh;
       overflow: hidden;
@@ -164,106 +143,102 @@
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#project">Project ReGenesis</a></li>
+      <li><a href="#why">Project ReGenesis</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <header class="main" id="home">
+  <!-- Main Home Section -->
+  <section id="home">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Title.mp4" type="video/mp4">
     </video>
     <div class="main-content">
       <h1>Welcome to ExpiScor</h1>
       <p>Engineering the future of regeneration through AI, biology, and bioinformatics.</p>
-      <a href="#project" class="button-link">Explore Project ReGenesis</a>
-    </div>
-  </header>
-
-  <!-- Project Section -->
-  <section id="project" class="project">
-    <video class="bgvid" autoplay muted loop playsinline>
-      <source src="Videos/Title.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-      <h2 class="major">Project ReGenesis</h2>
-      <p>Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
+      <a href="#why" class="button-link">Explore Project ReGenesis</a>
     </div>
   </section>
 
-  <section class="project">
+  <!-- Why -->
+  <section id="why">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Jellyfish.mp4" type="video/mp4">
     </video>
     <div class="content">
       <h2 class="major">Biological Inspiration</h2>
-      <p><em>Turritopsis dohrnii</em>, the Immortal Jellyfish, resets its life cycle by reverting cells to a juvenile state, offering a biological blueprint to reverse aging.</p>
+      <p><em>Turritopsis dohrnii</em>, also known as the Immortal Jellyfish, can biologically reset its life cycle by reverting mature cells to a juvenile state. Its unmatched regenerative powers offer a natural roadmap to reverse aging — a perfect subject for cutting-edge biotech research.</p>
     </div>
   </section>
 
-  <section class="project">
+  <!-- Problem -->
+  <section id="problem">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Coding.mp4" type="video/mp4">
     </video>
     <div class="content">
       <h2 class="major">The Problem</h2>
-      <p>Modern medicine treats symptoms, not causes. Aging is the root of chronic diseases, but regenerative tools are lacking—until now.</p>
+      <p>Modern medicine treats symptoms, not causes. Aging remains the underlying driver of chronic diseases and cellular decline. Humanity lacks the tools to repair age-related damage at the source — until now.</p>
     </div>
   </section>
 
-  <section class="project">
+  <!-- Approach -->
+  <section id="approach">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Genetics.mp4" type="video/mp4">
     </video>
     <div class="content">
       <h2 class="major">Our Approach</h2>
       <ul>
-        <li><strong>AI-Driven Genomic Mapping:</strong> Decode regenerative gene networks in <em>Turritopsis dohrnii</em>.</li>
-        <li><strong>Cross-Species Bioinformatics:</strong> Map human analogs to rejuvenation pathways.</li>
-        <li><strong>Target Discovery:</strong> Identify genes linked to age-related diseases.</li>
-        <li><strong>In Silico Modeling:</strong> Simulate biological responses and therapeutic hypotheses.</li>
+        <li><strong>AI-Driven Genomic Mapping:</strong> Using machine learning to decode regenerative gene networks in <em>Turritopsis dohrnii</em>.</li>
+        <li><strong>Cross-Species Bioinformatics:</strong> Identifying human analogs to jellyfish rejuvenation pathways for potential therapeutic relevance.</li>
+        <li><strong>Computational Target Discovery:</strong> Pinpointing key genes and molecular mechanisms linked to age-related and degenerative diseases.</li>
+        <li><strong>In Silico Modeling:</strong> Simulating biological interventions and cellular responses to accelerate hypothesis generation — without wet lab work.</li>
       </ul>
     </div>
   </section>
 
-  <section class="project">
+  <!-- Goals -->
+  <section id="goals">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Goals.mp4" type="video/mp4">
     </video>
     <div class="content">
       <h2 class="major">Goals</h2>
       <ul>
-        <li>Decode jellyfish rejuvenation genes.</li>
-        <li>Model aging processes using AI.</li>
-        <li>Apply findings to age-related diseases.</li>
-        <li>Accelerate regenerative discovery pipelines.</li>
+        <li>Decode the rejuvenation genome of the immortal jellyfish to understand natural cellular repair mechanisms.</li>
+        <li>Use AI to identify and model biological processes relevant to aging and regeneration.</li>
+        <li>Apply insights to age-associated diseases such as neurodegeneration, tissue fibrosis, and immune decline.</li>
+        <li>Build a digital-first research pipeline to accelerate discovery in regenerative biology and therapeutic development.</li>
       </ul>
     </div>
   </section>
 
-  <section class="project">
+  <!-- Mission -->
+  <section id="mission">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Mission.mp4" type="video/mp4">
     </video>
     <div class="content">
       <h2 class="major">Mission</h2>
-      <p>To lead a healthcare transformation by turning theoretical longevity science into real, scalable solutions.</p>
+      <p>To lead a global shift in healthcare by turning age-reversal science from theory into scalable, life-enhancing solutions.</p>
     </div>
   </section>
 
-  <section class="project">
+  <!-- Vision -->
+  <section id="vision">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Vision.mp4" type="video/mp4">
     </video>
     <div class="content">
       <h2 class="major">Vision</h2>
-      <p>To unlock resilience through natural regeneration and AI-driven discovery that can delay, prevent, or reverse aging.</p>
+      <p>To accelerate the understanding of natural regeneration and resilience through AI-driven research — unlocking new pathways to prevent, delay, or reverse age-related and degenerative diseases.</p>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="project" style="background: #111;">
+  <section id="about">
     <div class="content">
       <h2 class="major">About ExpiScor</h2>
       <p>We are a biotech startup merging artificial intelligence, bioinformatics, and regenerative science to build the next generation of longevity therapeutics. Our mission is to decode nature’s most powerful regenerative secrets and make them accessible to all.</p>
@@ -271,7 +246,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="project" style="background: rgba(0, 0, 0, 0.7); min-height: auto;">
+  <section id="contact">
     <div class="content">
       <h2 class="major">Contact</h2>
       <p>Email us at <a href="mailto:infoexpiscor@gmail.com" style="color: var(--accent);">infoexpiscor@gmail.com</a></p>
