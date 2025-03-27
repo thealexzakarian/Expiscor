@@ -1,30 +1,37 @@
-<nav style="position: fixed; top: 0; width: 100%; z-index: 999; background: rgba(0,0,0,0.6); padding: 1rem;">
-  <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; margin: 0; padding: 0;">
-    <li><a href="../index.html" style="color: #00ffc3; text-decoration: none; font-weight: bold;">Home</a></li>
-    <li><a href="../about.html" style="color: #00ffc3; text-decoration: none; font-weight: bold;">About</a></li>
-    <li><a href="../projects.html" style="color: #00ffc3; text-decoration: none; font-weight: bold;">Projects</a></li>
-    <li><a href="../contact.html" style="color: #00ffc3; text-decoration: none; font-weight: bold;">Contact</a></li>
-  </ul>
-</nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ExpiScor | Engineering Regeneration</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --accent: #00ffc3;
+      --text: #f1f1f1;
+      --muted: #999;
+    }
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       font-family: 'Inter', sans-serif;
       background: #000;
-      color: #f1f1f1;
-      text-align: center;
+      color: var(--text);
     }
 
     nav {
-      background: #111;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
       padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
     }
 
     nav ul {
@@ -32,124 +39,226 @@
       justify-content: center;
       gap: 2rem;
       list-style: none;
-      margin: 0;
-      padding: 0;
     }
 
     nav a {
-      color: #00ffc3;
+      color: var(--accent);
       text-decoration: none;
       font-weight: bold;
     }
 
-    header {
-      padding: 5rem 2rem;
+    header.main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: url('Videos/Title.mp4') no-repeat center center/cover;
     }
 
-    header h1 {
-      font-size: 3.5rem;
-      color: #00ffc3;
+    .main-content {
+      padding-top: 6rem;
+      max-width: 700px;
+      margin: auto;
     }
 
-    header p {
+    .main-content h1 {
+      font-size: 4rem;
+      color: var(--accent);
+    }
+
+    .main-content p {
       font-size: 1.2rem;
-      color: #aaa;
-      max-width: 600px;
-      margin: 1rem auto;
+      color: var(--muted);
+      margin-top: 1rem;
     }
 
     .button-link {
-      display: inline-block;
       margin-top: 2rem;
+      display: inline-block;
       padding: 1rem 2rem;
-      background: #00ffc3;
+      background: var(--accent);
       color: #000;
       font-weight: bold;
       border-radius: 8px;
       text-decoration: none;
     }
 
+    section.project {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    video.bgvid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.95;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 4rem 2rem;
+      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.4);
+      max-width: 900px;
+      margin: auto;
+      border-radius: 12px;
+    }
+
+    h2.major {
+      color: var(--accent);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
     footer {
-      background: #111;
-      color: #666;
+      text-align: center;
       padding: 2rem;
-      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
 <body>
-
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#project">Project ReGenesis</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <header>
-    <h1>Welcome to ExpiScor</h1>
-    <p>Engineering the future of regeneration through AI, biology, and digital biotech.</p>
-    <a href="projects/regenesis.html" class="button-link">Explore Project ReGenesis</a>
+  <header class="main" id="home">
+    <div class="main-content">
+      <h1>Welcome to ExpiScor</h1>
+      <p>Engineering the future of regeneration through AI, biology, and bioinformatics.</p>
+      <a href="#project" class="button-link">Explore Project ReGenesis</a>
+    </div>
   </header>
+
+  <!-- Project Section -->
+  <section id="project" class="project">
+    <video class="bgvid" autoplay muted loop playsinline>
+      <source src="Videos/Title.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Project ReGenesis</h2>
+      <p>Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
+    </div>
+  </section>
+
+  <section class="project">
+    <video class="bgvid" autoplay muted loop playsinline>
+      <source src="Videos/Jellyfish.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Biological Inspiration</h2>
+      <p><em>Turritopsis dohrnii</em>, the Immortal Jellyfish, resets its life cycle by reverting cells to a juvenile state, offering a biological blueprint to reverse aging.</p>
+    </div>
+  </section>
+
+  <section class="project">
+    <video class="bgvid" autoplay muted loop playsinline>
+      <source src="Videos/Coding.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">The Problem</h2>
+      <p>Modern medicine treats symptoms, not causes. Aging is the root of chronic diseases, but regenerative tools are lacking—until now.</p>
+    </div>
+  </section>
+
+  <section class="project">
+    <video class="bgvid" autoplay muted loop playsinline>
+      <source src="Videos/Genetics.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Our Approach</h2>
+      <ul>
+        <li><strong>AI-Driven Genomic Mapping:</strong> Decode regenerative gene networks in <em>Turritopsis dohrnii</em>.</li>
+        <li><strong>Cross-Species Bioinformatics:</strong> Map human analogs to rejuvenation pathways.</li>
+        <li><strong>Target Discovery:</strong> Identify genes linked to age-related diseases.</li>
+        <li><strong>In Silico Modeling:</strong> Simulate biological responses and therapeutic hypotheses.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="project">
+    <video class="bgvid" autoplay muted loop playsinline>
+      <source src="Videos/Goals.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Goals</h2>
+      <ul>
+        <li>Decode jellyfish rejuvenation genes.</li>
+        <li>Model aging processes using AI.</li>
+        <li>Apply findings to age-related diseases.</li>
+        <li>Accelerate regenerative discovery pipelines.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="project">
+    <video class="bgvid" autoplay muted loop playsinline>
+      <source src="Videos/Mission.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Mission</h2>
+      <p>To lead a healthcare transformation by turning theoretical longevity science into real, scalable solutions.</p>
+    </div>
+  </section>
+
+  <section class="project">
+    <video class="bgvid" autoplay muted loop playsinline>
+      <source src="Videos/Vision.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h2 class="major">Vision</h2>
+      <p>To unlock resilience through natural regeneration and AI-driven discovery that can delay, prevent, or reverse aging.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="project" style="background: #111;">
+    <div class="content">
+      <h2 class="major">About ExpiScor</h2>
+      <p>We are a biotech startup merging artificial intelligence, bioinformatics, and regenerative science to build the next generation of longevity therapeutics. Our mission is to decode nature’s most powerful regenerative secrets and make them accessible to all.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="project" style="background: rgba(0, 0, 0, 0.7); min-height: auto;">
+    <div class="content">
+      <h2 class="major">Contact</h2>
+      <p>Email us at <a href="mailto:infoexpiscor@gmail.com" style="color: var(--accent);">infoexpiscor@gmail.com</a></p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 ExpiScor. All rights reserved.</p>
   </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | ExpiScor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #000;
-      color: #f1f1f1;
-      font-family: 'Inter', sans-serif;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      list-style: none;
-      padding: 0;
-    }
-
-    nav a {
-      color: #00ffc3;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .project-link {
-      display: block;
-      margin-top: 2rem;
-      font-size: 1.2rem;
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <h1>Our Projects</h1>
-  <p class="project-link"><a href="projects/regenesis.html">→ Project ReGenesis</a></p>
-
 </body>
 </html>
