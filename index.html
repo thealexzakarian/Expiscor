@@ -8,7 +8,7 @@
   <style>
     :root {
       --accent: #00ffc3;
-      --text: #eafefb; /* enhanced for clarity */
+      --text: #eafefb;
       --muted: #9da5ad;
     }
 
@@ -23,6 +23,7 @@
       color: var(--text);
       line-height: 1.7;
       background: transparent;
+      scroll-behavior: smooth;
     }
 
     section, header {
@@ -147,7 +148,7 @@
     .fade-in {
       opacity: 0;
       transform: translateY(40px);
-      transition: opacity 1s ease, transform 1s ease;
+      transition: opacity 1.2s ease, transform 1.2s ease;
     }
 
     .fade-in.visible {
@@ -165,7 +166,7 @@
     </video>
     <div class="content fade-in">
       <h1>Project ReGenesis</h1>
-      <p> Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
+      <p>Engineering the future of regeneration by decoding nature’s immortal blueprint.</p>
       <nav>
         <ul>
           <li><a href="#why">Biological Inspiration</a></li>
@@ -272,7 +273,7 @@
     <p>&copy; 2025 ExpiScor | Regenesis Project — All rights reserved.</p>
   </footer>
 
-  <!-- Scroll animation script -->
+  <!-- Fade-in Scroll Script -->
   <script>
     const fadeEls = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
@@ -286,6 +287,5 @@
 
     fadeEls.forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
