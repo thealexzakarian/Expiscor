@@ -22,7 +22,7 @@
       font-family: 'Inter', sans-serif;
       background: #000;
       color: var(--text);
-      overflow: hidden; /* Prevent scrolling for a full-screen experience */
+      overflow: hidden; /* Full-screen experience */
     }
     .hero {
       position: relative;
@@ -33,7 +33,7 @@
       justify-content: center;
       text-align: center;
     }
-    /* Use the same class for background video as on the project page */
+    /* Background Video Styles (same as project page) */
     video.bgvid {
       position: absolute;
       top: 0;
@@ -45,7 +45,7 @@
       opacity: 0.95;
       pointer-events: none;
     }
-    /* Optional dark overlay to ensure text legibility */
+    /* Optional overlay for legibility */
     .hero::before {
       content: "";
       position: absolute;
@@ -59,7 +59,7 @@
     .content {
       position: relative;
       z-index: 1;
-      background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+      background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(6px);
       padding: 40px 30px;
       border-radius: 16px;
