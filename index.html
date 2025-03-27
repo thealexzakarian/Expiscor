@@ -62,13 +62,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
-      width: 100%;
+      width: 100%; /* Full width */
+      padding: 20px 0; /* Adds some padding around the logo */
     }
 
     .logo-container img {
-      width: 300px; /* Fixed width for more control */
-      height: auto; /* Maintain aspect ratio */
+      width: 60%; /* Increased size */
+      max-height: 100px; /* Limit the height to maintain aspect ratio */
+      object-fit: contain; /* Ensures the image is contained within its dimensions */
       filter: drop-shadow(0 0 8px rgba(0, 255, 195, 0.6));
     }
 
