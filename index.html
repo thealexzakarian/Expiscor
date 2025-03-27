@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project ReGenesis | ExpiScor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #00ffc3;
-      --text: #f1f1f1;
-      --muted: #999;
+      --text: #e8f9f6;
+      --muted: #a0a0a0;
+      --bg-glass: rgba(0, 0, 0, 0.4);
     }
 
     * {
@@ -19,10 +20,11 @@
     }
 
     html, body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Sora', sans-serif;
       color: var(--text);
-      background: transparent;
+      background: #000;
       line-height: 1.7;
+      scroll-behavior: smooth;
     }
 
     section, header {
@@ -52,16 +54,17 @@
       z-index: 1;
       padding: 4rem 2rem;
       backdrop-filter: blur(6px);
-      background: rgba(0, 0, 0, 0.4);
+      background: var(--bg-glass);
       max-width: 900px;
       margin: auto;
       border-radius: 12px;
+
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 1s ease, transform 1s ease;
+      transform: translateY(40px);
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
     }
 
-    .content.visible {
+    .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -154,12 +157,12 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Example section -->
   <header>
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Title.mp4" type="video/mp4">
     </video>
-    <div class="content">
+    <div class="content fade-in">
       <h1>Project ReGenesis</h1>
       <p>Reimagining longevity through the lens of nature’s most resilient lifeforms.</p>
       <nav>
@@ -176,113 +179,32 @@
     </div>
   </header>
 
-  <!-- Inspiration -->
+  <!-- Repeat for other sections -->
   <section id="why">
     <video class="bgvid" autoplay muted loop playsinline>
       <source src="Videos/Jellyfish.mp4" type="video/mp4">
     </video>
-    <div class="content">
+    <div class="content fade-in">
       <h2 class="major">Biological Inspiration</h2>
       <p><em>Turritopsis dohrnii</em>, the “immortal jellyfish,” can reset its life cycle and revert to a juvenile state. Its cellular regeneration offers a natural blueprint for combating aging — a profound biological phenomenon ripe for exploration.</p>
     </div>
   </section>
 
-  <!-- Challenge -->
-  <section id="problem">
-    <video class="bgvid" autoplay muted loop playsinline>
-      <source src="Videos/Coding.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-      <h2 class="major">The Challenge</h2>
-      <p>Today’s healthcare is reactive, not regenerative. Aging silently drives most chronic diseases, yet the tools to reverse its effects remain elusive. ReGenesis confronts aging at its core — with precision, innovation, and purpose.</p>
-    </div>
-  </section>
-
-  <!-- Approach -->
-  <section id="approach">
-    <video class="bgvid" autoplay muted loop playsinline>
-      <source src="Videos/Genetics.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-      <h2 class="major">Our Approach</h2>
-      <ul>
-        <li><strong>Genomic Mapping:</strong> Applying AI to decode the regenerative DNA of <em>Turritopsis dohrnii</em>.</li>
-        <li><strong>Cross-Species Analysis:</strong> Identifying human parallels to jellyfish rejuvenation pathways.</li>
-        <li><strong>Target Discovery:</strong> Locating critical genes driving aging and disease.</li>
-        <li><strong>Virtual Modeling:</strong> Simulating interventions in silico to accelerate research without lab delays.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Objectives -->
-  <section id="goals">
-    <video class="bgvid" autoplay muted loop playsinline>
-      <source src="Videos/Goals.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-      <h2 class="major">Our Objectives</h2>
-      <ul>
-        <li>Decode the regenerative blueprint of the immortal jellyfish.</li>
-        <li>Model aging and repair mechanisms using machine learning.</li>
-        <li>Translate discoveries into therapies for neurodegeneration, immune decline, and fibrosis.</li>
-        <li>Create a digital-first research platform for fast, scalable innovation.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Mission -->
-  <section id="mission">
-    <video class="bgvid" autoplay muted loop playsinline>
-      <source src="Videos/Mission.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-      <h2 class="major">Our Mission</h2>
-      <p>To lead the next evolution in regenerative science by transforming age reversal from theory to therapeutic reality.</p>
-    </div>
-  </section>
-
-  <!-- Vision -->
-  <section id="vision">
-    <video class="bgvid" autoplay muted loop playsinline>
-      <source src="Videos/Vision.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-      <h2 class="major">Our Vision</h2>
-      <p>To unlock the science of biological resilience — extending vitality, preventing disease, and redefining human longevity through AI-driven research.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" style="background: rgba(0, 0, 0, 0.7); padding: 1rem 0; min-height: auto;">
-    <style>
-      #contact video.bgvid {
-        display: none !important;
-      }
-    </style>
-    <div class="cta" style="margin: 0;">
-      <a href="mailto:infoexpiscor@gmail.com" class="button" style="padding: 0.6rem 2rem; font-size: 0.9rem;">Connect with Us</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 ExpiScor | Project ReGenesis — All rights reserved.</p>
-  </footer>
-
+  <!-- Add this script at the end of the body -->
   <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); // Remove if you want it to trigger every time
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.2 });
 
-    document.querySelectorAll('.content').forEach(el => {
-      observer.observe(el);
-    });
+    fadeEls.forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
