@@ -13,21 +13,18 @@
       --muted: #9da5ad;
       --overlay: rgba(0, 0, 0, 0.5);
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html, body {
       height: 100%;
       font-family: 'Inter', sans-serif;
       background: #000;
       color: var(--text);
-      overflow: hidden; /* Keep it a single-screen experience */
+      overflow: hidden; /* Keeps it as a single-screen experience */
     }
-
     .hero {
       position: relative;
       width: 100%;
@@ -37,8 +34,6 @@
       justify-content: center;
       text-align: center;
     }
-
-    /* Background Video */
     .hero video {
       position: absolute;
       top: 0;
@@ -48,8 +43,6 @@
       object-fit: cover;
       z-index: -2;
     }
-
-    /* Dark Overlay */
     .hero::before {
       content: "";
       position: absolute;
@@ -60,21 +53,17 @@
       background: var(--overlay);
       z-index: -1;
     }
-
-    /* Main Content Card */
     .content {
       position: relative;
       z-index: 1;
       background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-      backdrop-filter: blur(6px);     /* Subtle blur effect */
+      backdrop-filter: blur(6px);
       padding: 40px 30px;
       border-radius: 16px;
-      box-shadow: 0 0 30px rgba(0, 255, 195, 0.15); /* Soft glow around the card */
+      box-shadow: 0 0 30px rgba(0, 255, 195, 0.15);
       max-width: 400px;
       margin: 0 auto;
     }
-
-    /* Logo Container */
     .logo-container {
       display: flex;
       justify-content: center;
@@ -82,10 +71,8 @@
     }
     .logo-container img {
       max-width: 200px;
-      filter: drop-shadow(0 0 8px rgba(0, 255, 195, 0.6)); /* Glow around the logo */
+      filter: drop-shadow(0 0 8px rgba(0, 255, 195, 0.6));
     }
-
-    /* Headline and Tagline */
     .content h1 {
       font-size: 3rem;
       margin-bottom: 10px;
@@ -97,8 +84,6 @@
       margin-bottom: 30px;
       color: var(--muted);
     }
-
-    /* CTA Button */
     .content a.button {
       display: inline-block;
       padding: 1rem 2rem;
